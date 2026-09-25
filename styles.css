@@ -1,0 +1,453 @@
+/* Simple CSS for CampusPulse */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #4b5cdb;
+  color: white;
+  border: 1px solid #4b5cdb;
+  border-radius: 4px;
+}
+
+.btn-outline {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #4b5cdb;
+  color: white;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.badge-secondary {
+  background: #eee;
+  color: #333;
+  margin: 20px;
+}
+
+.badge-outline {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+input,
+select {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+progress {
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.brand>span {
+  padding: 5px;
+  background: #4b5cdb;
+  color: white;
+  border-radius: 4px;
+}
+
+.eyebrow {
+  display: block;
+  color: #9dabff;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.muted,
+.demo-note {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Shared appearance for inline icons; dimensions stay in HTML. */
+.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Welcome page */
+.demo-login {
+  min-height: 100vh;
+  display: flex;
+}
+
+.login-story {
+  width: 50%;
+  padding: 50px;
+  background: #3346b0;
+  color: white;
+}
+
+.login-story h1 {
+  font-size: 40px;
+  margin-top: 80px;
+}
+
+.login-story p {
+  font-size: 17px;
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.story-stats {
+  display: flex;
+  gap: 32px;
+  border-top: 1px solid #ffffff30;
+  margin: 48px 0px;
+  padding: 26px 0px;
+  font-size: 12px;
+}
+
+.story-stats strong {
+  display: block;
+  font-size: 18px;
+}
+
+.login-panel {
+  width: 50%;
+  padding: 70px;
+}
+
+.login-panel h2 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.role-options {
+  margin-top: 30px;
+}
+
+.role-options a {
+  display: block;
+  padding: 18px;
+  margin-bottom: 15px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.role-options strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.role-options small {
+  color: #666;
+}
+
+/* Main layout */
+.workspace {
+  min-height: 100vh;
+}
+
+.demo-sidebar {
+  width: 220px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  background: white;
+  border-right: 1px solid #ccc;
+}
+
+.demo-sidebar .brand {
+  margin-bottom: 25px;
+}
+
+.workspace-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.workspace-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 38px;
+  padding-top: 22px;
+  font-size: 9px;
+}
+
+.demo-sidebar nav a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.demo-sidebar nav a.active {
+  background: #e8ebff;
+  color: #3346b0;
+}
+
+.sidebar-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.sidebar-bottom a {
+  display: block;
+  margin-top: 15px;
+}
+
+.workspace-body {
+  margin-left: 220px;
+  min-height: 100vh;
+}
+
+.demo-navbar {
+  height: 60px;
+  padding: 15px 25px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-button {
+  padding: 6px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-avatar {
+  display: inline-block;
+  padding: 8px;
+  background: #4b5cdb;
+  color: white;
+  border-radius: 50%;
+}
+
+.profile-button small {
+  display: block;
+  color: #777;
+}
+
+#main-content {
+  padding: 30px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  font-size: 30px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.metric {
+  padding: 18px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.metric small {
+  color: #777;
+}
+
+.overview-banner {
+  padding: 25px;
+  margin-bottom: 25px;
+  background: #e8ebff;
+  border: 1px solid #ccd2ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 12px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.search-field input {
+  width: 100%;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.event-cover {
+  min-height: 80px;
+  padding: 15px;
+  background: #4b5cdb;
+  color: white;
+}
+
+.event-card-body {
+  padding: 15px;
+}
+
+.event-description {
+  color: #555;
+  font-size: 14px;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.capacity-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.card-actions .btn {
+  flex: 1;
+}
+
+/* Basic mobile layout */
+@media (max-width: 800px) {
+
+  .login-story,
+  .login-panel {
+    width: 100%;
+  }
+
+  .demo-login {
+    display: block;
+  }
+
+  .login-story {
+    min-height: 350px;
+  }
+
+  .demo-sidebar {
+    width: 180px;
+  }
+
+  .workspace-body {
+    margin-left: 180px;
+  }
+
+  .metric-grid,
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}

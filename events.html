@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CampusPulse | Events</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="workspace">
+      <aside class="demo-sidebar">
+        <div class="brand">
+          <span><svg class="icon" width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg></span>
+          CampusPulse
+        </div>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav aria-label="Main navigation">
+          <a href="participant.html"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"></rect><rect x="14" y="3" width="7" height="5" rx="1"></rect><rect x="14" y="12" width="7" height="9" rx="1"></rect><rect x="3" y="16" width="7" height="5" rx="1"></rect></svg><span>Overview</span></a><a class="active" aria-current="page" href="events.html"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Events</span></a><a href="registrations.html"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2m1 10 2 2 4-4"></path></svg><span>My registrations</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="demo-note">Your campus events and registrations.</div>
+          <a href="index.html"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 13 5-5-5-5M21 12H9"></path></svg>
+            Switch role / Log out</a>
+        </div>
+      </aside>
+      <div class="workspace-body">
+        <header class="demo-navbar">
+          <span>Workspace <span>/</span> Events</span>
+          <div class="navbar-actions">
+            <button class="icon-button" aria-label="Toggle color theme">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.985 12.486A9 9 0 1 1 11.51 3.01a7 7 0 0 0 9.475 9.476Z"></path></svg></button><a class="profile-button" aria-label="Switch role" href="index.html"><span class="profile-avatar">JD</span><span>Demo Participant<small>participant</small></span></a>
+          </div>
+        </header>
+        <main id="main-content">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">YOUR EVENT WORKSPACE</span>
+              <h1>Events</h1>
+              <p>View event details and manage your registrations.</p>
+            </div>
+          </div>
+          <div class="section-heading">
+            <h2>All events</h2>
+            <span class="muted" id="event-count">6 events</span>
+          </div>
+          <div class="toolbar">
+            <div class="search-field">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><input aria-label="Search events" placeholder="Search events..." />
+            </div>
+            <select aria-label="Event status">
+              <option value="all">All events</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div id="event-results">
+            <div class="event-grid">
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Technical</span><span class="badge badge-secondary">Upcoming</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>Web Development Bootcamp</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>22 Sept 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>10:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Room A-101</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>1 registered</span><span>29 seats left</span>
+                  </div>
+                  <progress value="1" max="30"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn">
+                      Register
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Workshop</span><span class="badge badge-secondary">Upcoming</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>AI &amp; Machine Learning Workshop</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>26 Sept 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>14:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Room B-101</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>2 registered</span><span>0 seats left</span>
+                  </div>
+                  <progress value="2" max="2"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn">
+                      Join waitlist
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Webinar</span><span class="badge badge-secondary">Upcoming</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>Cloud Computing Basics</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>30 Sept 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>10:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Virtual classroom</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>1 registered</span><span>49 seats left</span>
+                  </div>
+                  <progress value="1" max="50"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn">
+                      Register
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Technical</span><span class="badge badge-secondary">Upcoming</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>Design Systems Masterclass</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>4 Oct 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>14:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Room D-101</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>2 registered</span><span>58 seats left</span>
+                  </div>
+                  <progress value="2" max="60"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn" disabled="">
+                      Registered
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Workshop</span><span class="badge badge-secondary">Completed</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>Python Programming Workshop</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>8 Sept 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>10:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Room E-101</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>2 registered</span><span>68 seats left</span>
+                  </div>
+                  <progress value="2" max="70"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn" disabled="">
+                      Registered
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-cover">
+                  <svg class="icon" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg><span>Webinar</span><span class="badge badge-secondary">Completed</span>
+                </div>
+                <div class="event-card-body">
+                  <h3>Data Science Fundamentals</h3>
+                  <p class="event-description">
+                    Build practical skills through guided sessions, hands-on
+                    exercises, and conversations with fellow learners.
+                  </p>
+                  <div class="event-meta">
+                    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>7 Sept 2026</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>14:00</span><span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Room F-101</span>
+                  </div>
+                  <div class="capacity-label">
+                    <span>2 registered</span><span>78 seats left</span>
+                  </div>
+                  <progress value="2" max="80"></progress>
+                  <div class="card-actions">
+                    <button type="button" class="btn btn-outline">
+                      Details</button><button type="button" class="btn" disabled="">
+                      Registered
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <footer class="workspace-footer">
+            CampusPulse <span>Campus events and registrations</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
