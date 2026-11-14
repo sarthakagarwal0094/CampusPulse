@@ -1,0 +1,276 @@
+
+.admin-clashes {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f8f7f2;
+  color: #1f2937;
+}
+
+.clashes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.clashes-eyebrow {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.clashes-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.clashes-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.clashes-manage-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 17px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clashes-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.clash-stat {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.clash-stat-icon {
+  height: 48px;
+  width: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.clash-stat-icon.red {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.clash-stat-icon.amber {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.clash-stat-icon.green {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.clash-stat span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.clash-stat h2 {
+  font-size: 25px;
+  margin: 5px 0 0;
+}
+
+.clashes-list {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 24px;
+}
+
+.clashes-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.clashes-list-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.clashes-list-header span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.clash-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.clash-card:last-child {
+  margin-bottom: 0;
+}
+
+.clash-card.high {
+  border-left: 4px solid #dc2626;
+}
+
+.clash-card.warning {
+  border-left: 4px solid #d97706;
+}
+
+.clash-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.clash-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.clash-badge.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.clash-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.clash-severity {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.clash-events {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.clash-event {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 17px;
+}
+
+.clash-event h3 {
+  font-size: 16px;
+  margin: 0 0 13px;
+}
+
+.clash-event p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 13px;
+  margin: 9px 0 0;
+}
+
+.clash-vs {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.clash-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 18px;
+  padding-top: 15px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.clash-card-footer button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  color: #0f766e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clashes-empty {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 70px 20px;
+  text-align: center;
+  color: #0f766e;
+}
+
+.clashes-empty h2 {
+  color: #1f2937;
+  margin: 15px 0 8px;
+}
+
+.clashes-empty p {
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .clashes-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .clash-events {
+    grid-template-columns: 1fr;
+  }
+
+  .clash-vs {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-clashes {
+    padding: 20px;
+  }
+
+  .clashes-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .clash-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

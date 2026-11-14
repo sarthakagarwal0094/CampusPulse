@@ -1,0 +1,21 @@
+.events-calendar-panel { min-width:0; }
+.events-calendar-toolbar { display:flex; justify-content:space-between; align-items:center; margin:8px 0 14px; }
+.events-calendar-toolbar h3 { margin:0; font-size:16px; }
+.events-calendar-toolbar button { width:34px;height:34px;display:grid;place-items:center;border:1px solid #e2e8f0;border-radius:8px;background:#fff;color:#334155; }
+.events-calendar-toolbar button svg { width:18px;height:18px; }
+.events-calendar-grid { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px; }
+.calendar-weekday { text-align:center;font-size:11px;font-weight:700;color:#64748b;padding:5px 0; }
+.calendar-empty { min-height:40px; }
+.calendar-date { min-width:0;min-height:42px;padding:4px 2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:1px solid transparent;border-radius:9px;background:transparent;color:#334155;font:inherit;cursor:pointer; }
+.calendar-date:hover { background:#f0fdfa; }
+.calendar-date.today { border-color:#0f766e;color:#0f766e;font-weight:700; }
+.calendar-date.selected { background:#0f766e;color:white; }
+.calendar-event-dots { display:flex;gap:2px;min-height:5px; }
+.calendar-event-dots b,.calendar-legend i,.calendar-event-link>i { display:inline-block;width:7px;height:7px;border-radius:50%;background:#64748b; }
+.calendar-legend { display:flex;flex-wrap:wrap;gap:8px 14px;margin:14px 0;color:#475569;font-size:11px; }
+.calendar-legend span { display:flex;align-items:center;gap:5px; }.calendar-legend i { width:8px;height:8px; }
+.calendar-selected-events { border-top:1px solid #e2e8f0;padding-top:12px; }
+.calendar-selected-events h3 { margin:0 0 8px;font-size:14px; }.calendar-selected-events>p {color:#64748b;font-size:13px;margin:8px 0;}
+.calendar-event-link { display:flex;align-items:center;gap:10px;padding:9px 0;color:#1f2937;text-decoration:none;min-width:0; }
+.calendar-event-link>span { display:flex;flex:1;min-width:0;flex-direction:column;gap:3px; }.calendar-event-link strong,.calendar-event-link small {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.calendar-event-link strong {font-size:12px;}.calendar-event-link small {color:#64748b;font-size:11px;}
+@media(max-width:480px){.calendar-date{min-height:36px;font-size:12px}.calendar-empty{min-height:36px}.calendar-legend{gap:7px 10px}}

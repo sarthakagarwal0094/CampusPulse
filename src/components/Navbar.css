@@ -1,0 +1,145 @@
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248, 247, 242, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 92%;
+  margin: auto;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo-accent {
+  color: #14B8A6;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-login,
+.nav-register {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-login {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.nav-login:hover {
+  background: var(--color-primary-light);
+}
+
+.nav-register {
+  background: var(--color-primary);
+  color: white;
+}
+
+.nav-register:hover {
+  background: var(--color-primary-dark);
+}
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 16px;
+    background: #f8f7f2;
+    border: 1px solid var(--color-border);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, .12);
+  }
+
+  .nav-links.open .nav-link { padding: 10px 0; }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    min-height: 66px;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    font-size: 19px;
+  }
+
+  .nav-logo svg {
+    width: 24px;
+  }
+
+  .nav-actions {
+    gap: 7px;
+  }
+
+  .nav-login,
+  .nav-register {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+}

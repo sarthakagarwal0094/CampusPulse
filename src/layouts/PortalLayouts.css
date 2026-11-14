@@ -1,0 +1,139 @@
+.portal-shell {
+  --portal-sidebar-width: 260px;
+  display: flex;
+  min-height: 100vh;
+  background: #f8f7f2;
+  color: #1f2937;
+}
+
+.portal-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: var(--portal-sidebar-width);
+  height: 100vh;
+  overflow-y: auto;
+  padding: 24px 16px;
+  background: #003f3a;
+  color: #fff;
+}
+
+.portal-brand, .portal-admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.portal-brand > span > span { color: #65d6b1; }
+.portal-admin-brand { padding: 0 8px 22px; border-bottom: 1px solid #ffffff24; }
+.portal-admin-brand h2 { font-size: 19px; line-height: 1.3; }
+.portal-admin-brand p, .portal-caption { color: #a8c7c1; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; }
+.portal-caption { margin: 0 8px 12px; }
+.portal-user { display: flex; gap: 10px; align-items: center; padding: 18px 6px; }
+.portal-user b { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #14776a; }
+.portal-user div { display: grid; }
+.portal-user strong { font-size: 12px; }
+.portal-user small { color: #b9d4ce; font-size: 11px; }
+.portal-nav { display: grid; gap: 6px; margin-top: 22px; }
+.portal-nav a { display: flex; align-items: center; gap: 12px; padding: 11px 12px; border-radius: 8px; color: #d1e5df; font-size: 14px; transition: background .15s ease; }
+.portal-nav a:hover, .portal-nav a.active { background: #ffffff1c; color: white; }
+.portal-sidebar-footer { display: grid; gap: 3px; margin-top: auto; padding: 20px 10px 4px; color: #b9d4ce; font-size: 12px; }
+.portal-sidebar-footer strong { color: white; }
+.portal-sidebar-footer button { display: flex; align-items: center; gap: 10px; border: 0; padding: 0; background: transparent; color: inherit; text-align: left; }
+.route-not-found { min-height: 100vh; display: grid; align-content: center; justify-items: center; gap: 12px; padding: 24px; text-align: center; }
+.portal-content { flex: 1; min-width: 0; min-height: 100vh; margin-left: var(--portal-sidebar-width); }
+.portal-mobile-menu-bar { display: none; }
+
+/* Child pages previously supplied their own portal shell and sidebar. Keep their
+   existing page content and styles while using this single shared sidebar. */
+.portal-content > * { width: 100%; min-width: 0; }
+.portal-content aside[class*="sidebar"] { display: none !important; }
+.portal-content .admin-layout,
+.portal-content .ae-layout,
+.portal-content .ac-layout,
+.portal-content .coord-layout,
+.portal-content .student-dashboard,
+.portal-content .registrations-layout,
+.portal-content .attendance-layout,
+.portal-content .campuscred-layout,
+.portal-content .certificates-layout,
+.portal-content .event-details-layout,
+.portal-content .student-profile-layout,
+.portal-content .achievement-card-layout { display: block; min-height: 0; width: 100%; }
+.portal-content main { width: 100%; min-width: 0; margin-left: 0 !important; }
+.portal-content .admin-main,
+.portal-content .ae-main,
+.portal-content .ac-main,
+.portal-content .coord-main,
+.portal-content .student-main,
+.portal-content .registrations-main,
+.portal-content .attendance-main,
+.portal-content .campuscred-main,
+.portal-content .certificates-main,
+.portal-content .event-details-main,
+.portal-content .student-profile-main,
+.portal-content .achievement-card-main { width: 100%; margin-left: 0 !important; }
+
+@media (max-width: 768px) {
+  .portal-shell { --portal-sidebar-width: 76px; }
+  .portal-sidebar { padding: 18px 8px; align-items: center; }
+  .portal-brand, .portal-admin-brand { justify-content: center; padding-inline: 0; }
+  .portal-brand > span, .portal-admin-brand > div, .portal-caption,
+  .portal-user { display: none; }
+  .portal-sidebar-footer { padding: 0; }
+  .portal-sidebar-footer strong, .portal-sidebar-footer span { display: none; }
+  .portal-sidebar-footer button { justify-content: center; margin-top: auto; padding: 12px 4px; }
+  .portal-nav a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .portal-nav { width: 100%; }
+  .portal-nav a { justify-content: center; padding: 12px 4px; }
+  .portal-nav a svg { flex: none; }
+
+  /* Keep the admin and coordinator icon rails unchanged. The student portal
+     uses a drawer so its page content can use the full tablet/mobile width. */
+  .student-portal { --portal-sidebar-width: 0px; }
+  .student-portal .portal-content { width: 100%; margin-left: 0; }
+  .student-portal .portal-sidebar {
+    width: min(280px, 85vw);
+    align-items: stretch;
+    padding: 24px 16px;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+  }
+  .student-menu-open .portal-sidebar { transform: translateX(0); }
+  .student-portal .portal-brand { justify-content: flex-start; padding-inline: 0; }
+  .student-portal .portal-brand > span,
+  .student-portal .portal-user { display: flex; }
+  .student-portal .portal-user div { display: grid; min-width: 0; }
+  .student-portal .portal-nav { width: 100%; }
+  .student-portal .portal-nav a { justify-content: flex-start; padding: 11px 12px; }
+  .student-portal .portal-nav a span {
+    position: static; width: auto; height: auto; overflow: visible;
+    clip-path: none; white-space: normal;
+  }
+  .student-portal .portal-sidebar-footer { padding: 20px 10px 4px; }
+  .student-portal .portal-sidebar-footer button { justify-content: flex-start; margin: 0; padding: 0; }
+  .student-portal .portal-sidebar-footer button span { display: inline; }
+  .student-portal .portal-mobile-menu-bar {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 4px 16px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .portal-mobile-menu-bar button {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 0; padding: 7px 9px; border-radius: 7px;
+    background: #e1f6f1; color: #075e54; font: inherit;
+  }
+  .student-portal .portal-mobile-backdrop {
+    position: fixed; inset: 0; z-index: 999;
+    border: 0; background: rgb(15 23 42 / 38%);
+  }
+}

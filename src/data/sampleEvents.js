@@ -1,0 +1,57 @@
+import technicalImage from "../assets/events/technical.jpg";
+import culturalImage from "../assets/events/cultural.jpg";
+import workshopImage from "../assets/events/workshops.jpg";
+import sportsImage from "../assets/events/sports.jpg";
+
+const catalog = [
+  [1, "InnoTech26 – Tech Hackathon", "Technical", "2026-11-21", "09:00", "17:00", "KIET Auditorium", technicalImage],
+  [5, "CodeSprint: Inter-Department Challenge", "Technical", "2026-12-05", "10:00", "16:00", "Seminar Hall", technicalImage],
+  [6, "Build for Campus Hack Day", "Technical", "2026-12-19", "09:30", "18:00", "KIET Auditorium", technicalImage],
+  [7, "WebCraft Frontend Challenge", "Technical", "2027-01-09", "10:00", "15:00", "Seminar Hall", technicalImage],
+  [8, "TechNova Student Symposium", "Technical", "2027-01-23", "09:00", "16:00", "KIET Auditorium", technicalImage],
+  [2, "Echoes – Cultural Night", "Cultural", "2026-11-28", "17:00", "21:00", "Main Auditorium", culturalImage],
+  [9, "Rhythm & Roots Dance Showcase", "Cultural", "2026-12-06", "16:00", "20:00", "Main Auditorium", culturalImage],
+  [10, "Campus Voices: Solo Singing", "Cultural", "2026-12-20", "15:00", "19:00", "Main Auditorium", culturalImage],
+  [11, "Rangmanch One-Act Theatre Fest", "Cultural", "2027-01-10", "16:30", "20:30", "Main Auditorium", culturalImage],
+  [12, "Sanskriti Winter Festival", "Cultural", "2027-01-24", "11:00", "20:00", "Main Auditorium", culturalImage],
+  [13, "Inter-College Cricket Cup", "Sports", "2026-11-22", "08:00", "17:00", "Sports Ground", sportsImage],
+  [14, "Campus Five-a-Side Football", "Sports", "2026-12-12", "09:00", "16:00", "Sports Ground", sportsImage],
+  [15, "Badminton Doubles Open", "Sports", "2026-12-27", "09:00", "15:00", "Sports Ground", sportsImage],
+  [16, "Checkmate Campus Chess Meet", "Sports", "2027-01-16", "10:00", "16:00", "KIET Auditorium", sportsImage],
+  [4, "Campus Athletics & Sports Meet", "Sports", "2027-01-30", "08:00", "17:00", "Sports Ground", sportsImage],
+  [17, "Frame the Campus Photography Walk", "Arts", "2026-11-29", "08:30", "13:00", "Sports Ground", culturalImage],
+  [18, "Canvas & Color Painting Contest", "Arts", "2026-12-13", "10:00", "15:00", "Seminar Hall", culturalImage],
+  [19, "Design for Good Poster Challenge", "Arts", "2026-12-26", "11:00", "16:00", "Seminar Hall", culturalImage],
+  [20, "Campus Creatives Exhibition", "Arts", "2027-01-17", "10:00", "18:00", "Main Auditorium", culturalImage],
+  [21, "Watercolor Weekend Art Workshop", "Arts", "2027-01-31", "10:00", "14:00", "Seminar Hall", culturalImage],
+  [3, "Python for AI/ML Workshop", "Workshop", "2026-11-18", "10:00", "13:00", "Seminar Hall", workshopImage],
+  [22, "CyberShield: Cybersecurity Basics", "Workshop", "2026-12-07", "10:00", "13:00", "Seminar Hall", workshopImage],
+  [23, "Cloud Foundations with AWS Academy", "Workshop", "2026-12-21", "10:00", "14:00", "KIET Auditorium", workshopImage],
+  [24, "Resume Lab: Build Your First Portfolio", "Workshop", "2027-01-11", "11:00", "13:30", "Seminar Hall", workshopImage],
+  [25, "Career Ready: Interview Practice", "Workshop", "2027-01-25", "10:00", "13:00", "Seminar Hall", workshopImage],
+];
+
+export const sampleEvents = catalog.map(([id, title, category, date, startTime, endTime, venue, image], index) => ({
+  id,
+  seedKey: `campuspulse-sample-${id}`,
+  title,
+  category,
+  description: `${title} is a student-focused ${category.toLowerCase()} event at KIET. Meet fellow students, learn from campus mentors, and take part in a welcoming, well-organized program.`,
+  date,
+  endDate: date,
+  startTime,
+  endTime,
+  time: `${startTime} – ${endTime}`,
+  timeZone: "Asia/Kolkata",
+  venue,
+  capacity: [300, 500, 250, 120, 150][index % 5],
+  registrationCount: [1, 2, 4].includes(id) ? 1 : 0,
+  registrationDeadline: new Date(new Date(`${date}T12:00:00Z`).getTime() - 86400000 * 3).toISOString().slice(0, 10),
+  eligibility: "Open to currently enrolled KIET students; bring your student ID.",
+  registrationStatus: "Open",
+  status: "Upcoming",
+  image,
+  leadCoordinator: `coord-00${(index % 3) + 1}`,
+  coCoordinators: [`coord-00${((index + 1) % 3) + 1}`],
+  tags: [category, "Campus", "Student event"],
+}));

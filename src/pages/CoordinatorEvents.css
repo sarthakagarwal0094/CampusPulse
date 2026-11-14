@@ -1,0 +1,250 @@
+
+.coord-events-page {
+  padding: 32px;
+  min-height: 100vh;
+  background: #f3f8f7;
+}
+
+.coord-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.coord-events-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.coord-events-header p {
+  color: #64748b;
+  margin: 0;
+  font-size: 14px;
+}
+
+.coord-create-btn {
+  background: #0f766e;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.coord-create-btn:hover {
+  background: #115e59;
+}
+
+.coord-events-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.coord-events-summary > div {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #edf2f3;
+}
+
+.coord-events-summary span,
+.coord-events-summary strong {
+  display: block;
+}
+
+.coord-events-summary span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.coord-events-summary strong {
+  font-size: 28px;
+  margin-top: 8px;
+  color: #0f766e;
+}
+
+.coord-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.coord-managed-event {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e7eeee;
+  box-shadow: 0 4px 15px rgba(15, 60, 55, 0.04);
+}
+
+.coord-managed-event-image {
+  height: 185px;
+  position: relative;
+}
+
+.coord-managed-event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coord-managed-status {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8f9ed;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.coord-managed-status.cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.coord-managed-status.completed {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.coord-managed-event-body {
+  padding: 22px;
+}
+
+.coord-event-category { display:inline-flex; padding:4px 9px; border-radius:999px; font-size:11px; font-weight:700; }
+
+.coord-managed-role {
+  display: inline-block;
+  background: #e0f7f3;
+  color: #0f766e;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.coord-managed-role.lead {
+  background: #d7f5ef;
+  color: #065f56;
+}
+
+.coord-managed-event-body h2 {
+  font-size: 19px;
+  margin: 13px 0;
+}
+
+.coord-managed-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.coord-managed-meta span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.coord-managed-team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 13px;
+  padding: 13px 0;
+  border-top: 1px solid #edf2f3;
+}
+
+.coord-managed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid #edf2f3;
+}
+
+.coord-managed-actions a,
+.coord-managed-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #dbe5e7;
+  background: white;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.coord-managed-actions .coord-view-event {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: white;
+}
+
+.coord-managed-actions .coord-delete-event {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.coord-events-empty {
+  background: white;
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.coord-events-empty h2 {
+  color: #1f2937;
+}
+
+@media (max-width: 900px) {
+  .coord-events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .coord-events-page {
+    padding: 20px 14px;
+  }
+
+  .coord-events-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .coord-events-summary {
+    gap: 10px;
+  }
+
+  .coord-events-summary > div {
+    padding: 14px;
+  }
+
+  .coord-events-summary span {
+    font-size: 11px;
+  }
+
+  .coord-events-summary strong {
+    font-size: 23px;
+  }
+}

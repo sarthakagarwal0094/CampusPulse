@@ -1,0 +1,21 @@
+.register-page { min-height:100vh; min-height:100svh; width:100%; min-width:0; padding:22px clamp(14px,4vw,48px) 14px; display:flex; flex-direction:column; align-items:center; background:#f8f7f2; color:#1f2937; }
+.register-page-header { width:min(100%,950px); display:flex; align-items:center; justify-content:space-between; gap:16px; margin:0 auto 14px; }
+.register-brand { display:inline-flex; align-items:center; gap:9px; color:#0f766e; font-size:21px; font-weight:700; }
+.register-brand svg { color:#0f766e; }.register-brand > span > span { color:#14b8a6; }
+.register-back-home { color:#475569; font-size:13px; font-weight:600; }.register-back-home:hover,.register-login-link a:hover { color:#0f766e; }
+.register-card { width:min(100%,920px); min-width:0; margin:0 auto; padding:clamp(20px,3vw,34px); background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:0 8px 28px rgba(15,23,42,.06); }
+.register-card-heading { margin-bottom:20px; }.register-eyebrow { color:#0f766e; font-size:11px; font-weight:700; letter-spacing:1.1px; }.register-card-heading h1 { margin:4px 0; font-size:clamp(23px,3vw,29px); line-height:1.25; }.register-card-heading p { color:#64748b; font-size:14px; }
+.register-form { display:grid; gap:16px; min-width:0; }.register-section { min-width:0; border:0; }.register-section legend { width:100%; margin-bottom:10px; padding:0 0 7px; border-bottom:1px solid #e8eeec; color:#1f2937; font-size:15px; font-weight:700; }
+.register-field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 16px; min-width:0; }.register-field-grid-single { grid-template-columns:minmax(0,1fr); }
+.register-field { display:grid; gap:5px; min-width:0; }.register-field > label { color:#334155; font-size:12px; font-weight:600; }.register-field > label span { color:#64748b; font-weight:400; }
+.register-control { height:46px; min-width:0; width:100%; display:flex; align-items:center; gap:9px; padding:0 12px; border:1px solid #d8e1df; border-radius:8px; background:#fff; color:#78908b; }
+.register-control:focus-within { border-color:#0f766e; box-shadow:0 0 0 3px rgba(15,118,110,.1); }.register-control > svg { flex:none; }
+.register-control input,.register-control select { flex:1 1 auto; width:100%; min-width:0; max-width:100%; height:100%; padding:0; border:0; outline:0; background:transparent; color:#1f2937; font:400 13px var(--font-primary); box-sizing:border-box; }
+.register-control input::placeholder { color:#94a3b8; }.register-control select:invalid { color:#94a3b8; }
+.register-password-toggle { flex:none; display:grid; place-items:center; padding:4px; border:0; background:transparent; color:#64748b; }
+.register-terms { display:flex; align-items:flex-start; gap:9px; min-width:0; color:#475569; font-size:12px; line-height:1.5; }.register-terms input { flex:none; margin-top:2px; accent-color:#0f766e; }.register-terms a { color:#0f766e; font-weight:600; }
+.register-error { padding:10px 12px; border:1px solid #fecaca; border-radius:8px; background:#fef2f2; color:#b91c1c; font-size:13px; line-height:1.45; overflow-wrap:anywhere; }
+.register-submit { width:100%; min-height:46px; display:flex; align-items:center; justify-content:center; gap:9px; border:0; border-radius:8px; background:#0f766e; color:#fff; font-size:14px; font-weight:700; }.register-submit:hover:not(:disabled) { background:#115e59; }.register-submit:disabled { opacity:.7; cursor:wait; }
+.register-login-link { margin:14px 0 0; text-align:center; color:#64748b; font-size:13px; }.register-login-link a { color:#0f766e; font-weight:700; }.register-footer { margin-top:14px; color:#94a3b8; text-align:center; font-size:11px; }
+@media(max-width:600px) { .register-page { padding:14px 12px; }.register-page-header { margin-bottom:10px; }.register-brand { font-size:19px; }.register-card { padding:18px 15px; border-radius:12px; }.register-card-heading { margin-bottom:15px; }.register-field-grid { grid-template-columns:minmax(0,1fr); gap:10px; }.register-form { gap:13px; } }
+@media(min-width:601px) and (max-width:850px) { .register-card { padding:25px; }.register-field-grid { column-gap:14px; } }

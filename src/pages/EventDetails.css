@@ -1,0 +1,336 @@
+
+.event-details-layout {
+  min-height: 100vh;
+  background: #F8F7F2;
+}
+
+.event-details-main {
+  margin-left: 260px;
+  padding: 30px 38px;
+  min-width: 0;
+}
+
+.event-details-layout .student-sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: #003F3A;
+  color: white;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-brand {
+  font-size: 25px;
+  margin: 0;
+}
+
+.sidebar-subtitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #99D5C9;
+  margin: 5px 0 35px;
+}
+
+.student-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-sidebar-nav a {
+  color: #C8E2DC;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.student-sidebar-nav a:hover,
+.student-sidebar-nav a.active {
+  background: #0F766E;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #285E58;
+  padding-top: 18px;
+}
+
+.sidebar-bottom p {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.sidebar-bottom small {
+  color: #A7D2C9;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0F766E;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.event-details-banner {
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.event-details-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,35,32,.85), rgba(0,35,32,.15));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  color: white;
+}
+
+.event-category {
+  background: #CCFBF1;
+  color: #115E59;
+  width: fit-content;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.event-details-banner h1 {
+  font-size: 36px;
+  margin: 18px 0 8px;
+}
+
+.event-details-banner p {
+  margin: 0;
+  color: #D5EAE5;
+}
+
+.event-details-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 25px;
+  align-items: start;
+}
+
+.event-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.details-card,
+.event-registration-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.03);
+}
+.event-campuscred-points { display:flex;align-items:flex-start;gap:10px;margin:14px 0;padding:12px;border:1px solid #c9e8e2;border-radius:10px;background:#eff8f6;color:#0f766e; }
+.event-campuscred-points svg { flex:none; }
+.event-campuscred-points strong,.event-campuscred-points small { display:block; }
+.event-campuscred-points small { margin-top:4px;color:#475569;line-height:1.45; }
+
+.details-card h2,
+.event-registration-card h2 {
+  margin: 0 0 18px;
+  font-size: 21px;
+  color: #1F2937;
+}
+
+.details-card h3 {
+  margin: 24px 0 12px;
+  font-size: 16px;
+}
+
+.details-card p,
+.details-card li {
+  color: #64748B;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.details-card ul {
+  padding-left: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.schedule-item p {
+  margin: 0;
+}
+
+.schedule-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0F766E;
+  flex-shrink: 0;
+}
+
+.event-registration-card {
+  position: sticky;
+  top: 25px;
+}
+
+.event-info-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 22px 0;
+}
+
+.event-info-item svg {
+  width: 20px;
+  color: #0F766E;
+}
+
+.event-info-item small {
+  color: #64748B;
+  font-size: 12px;
+}
+
+.event-info-item p {
+  margin: 5px 0 0;
+  color: #1F2937;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.registration-deadline {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 18px;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.registration-deadline strong {
+  display: block;
+  color: #D97706;
+  margin-top: 7px;
+}
+
+.register-event-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0F766E;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.register-event-btn:hover {
+  background: #115E59;
+}
+
+.register-event-btn.registered {
+  background: #16A34A;
+  cursor: default;
+}
+
+.registration-success {
+  color: #15803D;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.registration-note {
+  color: #94A3B8;
+  text-align: center;
+  font-size: 12px;
+  margin: 15px 0 0;
+}
+
+@media (max-width: 1100px) {
+  .event-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-registration-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .event-details-main {
+    margin-left: 75px;
+    padding: 25px;
+  }
+
+  .event-details-layout .student-sidebar {
+    width: 75px;
+    padding: 20px 8px;
+  }
+
+  .student-sidebar-nav a {
+    font-size: 0;
+    text-align: center;
+  }
+
+  .sidebar-brand,
+  .sidebar-subtitle,
+  .sidebar-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-details-main {
+    margin-left: 65px;
+    padding: 15px;
+  }
+
+  .event-details-layout .student-sidebar {
+    width: 65px;
+  }
+
+  .event-details-banner {
+    height: 220px;
+  }
+
+  .event-details-banner-overlay {
+    padding: 20px;
+  }
+
+  .event-details-banner h1 {
+    font-size: 25px;
+  }
+
+  .details-card,
+  .event-registration-card {
+    padding: 18px;
+  }
+}

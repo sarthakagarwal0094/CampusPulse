@@ -1,0 +1,14 @@
+.category-badge { color:var(--category-foreground, #475569); background:var(--category-background, #e2e8f0); }
+.category-technical { --category-foreground:#1d4ed8; --category-background:#dbeafe; background:#2563eb; color:#1d4ed8; }
+.category-cultural { --category-foreground:#6d28d9; --category-background:#ede9fe; background:#8b5cf6; color:#6d28d9; }
+.category-sports { --category-foreground:#15803d; --category-background:#dcfce7; background:#16a34a; color:#15803d; }
+.category-arts { --category-foreground:#c2410c; --category-background:#ffedd5; background:#ea580c; color:#c2410c; }
+.category-workshop { --category-foreground:#0f766e; --category-background:#ccfbf1; background:#0f766e; color:#0f766e; }
+.category-other { --category-foreground:#475569; --category-background:#e2e8f0; background:#64748b; color:#475569; }
+.category-badge.category-technical,.category-badge.category-cultural,.category-badge.category-sports,.category-badge.category-arts,.category-badge.category-workshop,.category-badge.category-other { background:var(--category-background); color:var(--category-foreground); }
+.calendar-event-dots .category-technical,.calendar-legend .category-technical { background:#2563eb; }
+.calendar-event-dots .category-cultural,.calendar-legend .category-cultural { background:#8b5cf6; }
+.calendar-event-dots .category-sports,.calendar-legend .category-sports { background:#16a34a; }
+.calendar-event-dots .category-arts,.calendar-legend .category-arts { background:#ea580c; }
+.calendar-event-dots .category-workshop,.calendar-legend .category-workshop { background:#0f766e; }
+.calendar-event-dots .category-other,.calendar-legend .category-other { background:#64748b; }

@@ -1,0 +1,7 @@
+.calendar-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:12px; min-width:0; }
+.calendar-actions a,.calendar-actions button { display:inline-flex; align-items:center; justify-content:center; gap:7px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f766e; padding:8px 10px; font-family:inherit; font-size:12px; font-weight:600; text-decoration:none; cursor:pointer; }
+.calendar-actions a:hover,.calendar-actions button:hover { background:#f0fdfa; border-color:#0f766e; }
+.calendar-actions > span { flex-basis:100%; color:#0f766e; font-size:12px; }
+.calendar-actions.compact a,.calendar-actions.compact button { padding:6px 8px; font-size:11px; }
+.calendar-actions.icon-only { gap:5px; }
+.calendar-actions.icon-only a,.calendar-actions.icon-only button { width:30px;height:30px;padding:5px; }
