@@ -94,7 +94,7 @@ function Login() {
 
             <div className="password-label-row">
               <label htmlFor="password">Password</label>
-              <span title="Password recovery is unavailable">Password recovery unavailable</span>
+              <span title="Password recovery is unavailable">Forget Password?</span>
             </div>
 
             <div className="login-input-wrapper">
